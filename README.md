@@ -6,7 +6,7 @@ Create a remediation script for defined use cases using Ansible or Terraform. Cr
 
 **Remediation resource** - AWS EKS
 Resource metadata / parameter / factor  - logging enabled
-why remediation? -
+**why remediation?** -
 This remediation is useful for audit and logging purpose. Please refer to the below document for more details.
 https://docs.aws.amazon.com/eks/latest/userguide/control-plane-logs.html
 
@@ -84,12 +84,19 @@ choco install awscli
 brew install awscli
 
 After you've installed the AWS CLI, configure it by running aws configure.
+
 When prompted, enter your AWS Access Key ID, Secret Access Key, region and output format.
+
 aws configure
+
 AWS Access Key ID [None]: YOUR_AWS_ACCESS_KEY_ID
+
 AWS Secret Access Key [None]: YOUR_AWS_SECRET_ACCESS_KEY
+
 Default region name [None]: YOUR_AWS_REGION
+
 Default output format [None]: json
+
 
 If you don't have an AWS Access Credentials, create your AWS Access Key ID and Secret Access Key by navigating to your service credentials in the IAM service on AWS. Click "Create access key" here and download the file. This file contains your access credentials.
 
@@ -117,6 +124,7 @@ In your initialized directory, run terraform apply and review the planned action
 **Step:2** - $ terraform plan 
 
 An execution plan has been generated and is shown below.
+
 Resource actions are indicated with the following symbols:
   + create
  <= read (data resources)
@@ -133,6 +141,7 @@ Resource actions are indicated with the following symbols:
 This process should take approximately 10 minutes. Upon successful application, your terminal prints the outputs defined in outputs.tf.
 
 **Clean up your workspace**
+
 Remember to destroy any resources you create once you are done with this tutorial. Run the destroy command and confirm with yes in your terminal.
 
 terraform destroy
@@ -145,9 +154,13 @@ cluster_name - Described the name of the EKS cluster name.
 In here, you will find five files used to provision a VPC and an EKS cluster.
 
 **vpc.tf** provisions a VPC, subnets and availability zones using the AWS VPC Module. A new VPC is created for this test 
+
 **terraform.tf** sets the Terraform version to at least 0.14. It also sets versions for the providers used in this sample which is AWS.
+
 **variables.tf** has all the variables configured which will be used in this test.
+
 **outputs.tf** defines the output configuration.
+
 **eks-logging.tf** provisions all the resources required to set up an EKS cluster using the AWS EKS Module with Control plane logging enabled.
 
 **Any relevant reference can be added to the readme.md -**
