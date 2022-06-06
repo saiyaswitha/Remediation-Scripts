@@ -104,21 +104,20 @@ If you don't have an AWS Access Credentials, create your AWS Access Key ID and S
 
 In your terminal, clone the following repository. It contains the example configuration used in this tutorial.
 
-$ git clone https://github.com/hashicorp/learn-terraform-provision-eks-cluster
-
-You can explore this repository by changing directories or navigating in your UI.
-
-$ cd learn-terraform-provision-eks-cluster
+$ git clone https://github.com/saiyaswitha/Remediation-Scripts
 
 
 **Initialize Terraform workspace**
+
 Once you have cloned the repository, initialize your Terraform workspace, which will download and configure the providers.
 
 **Step:1 **- $ terraform init
+
 Initializing modules...
 .....
 
 **Provision the EKS cluster**
+
 In your initialized directory, run terraform apply and review the planned actions. Your terminal output should indicate the plan is running and what resources will be created.
 
 **Step:2** - $ terraform plan 
