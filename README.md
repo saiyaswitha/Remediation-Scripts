@@ -54,6 +54,7 @@ An IAM user or AIM role would need minimum below permissions to view the EKS clu
     ]
 } 
 
+
 **Reference to the backlog / use-case id in spreadsheet -**
 **Ref**: Slide 4 and Step -3 from the presentation.
 
@@ -73,9 +74,13 @@ All the code for creating the infrastructure including the remdiation is include
 **AWS CLI installation:**
 
 In order for Terraform to run operations on your behalf, you must install and configure the AWS CLI tool. To install the AWS CLI, follow these instructions or choose a package manager based on your operating system.
+
 **For Windows:**
+
 choco install awscli
+
 **For MacOS:**
+
 brew install awscli
 
 After you've installed the AWS CLI, configure it by running aws configure.
