@@ -146,11 +146,16 @@ Remember to destroy any resources you create once you are done with this tutoria
 
 terraform destroy
 
-**Details about the variables/parameters used ** 
+**Details about the variables/parameters used** 
+
 Variables used are stored in "variables.tf" file.
-region - Describes in which region you want the resources to be deployed in . Ex: us-east-2
-cluster_name - Described the name of the EKS cluster name.
+
+**region** - Describes in which region you want the resources to be deployed in . **Ex**: us-east-2
+
+**cluster_name** - Described the name of the EKS cluster name.
+
 **Add file/folder details - names and purpose. - **
+
 In here, you will find five files used to provision a VPC and an EKS cluster.
 
 **vpc.tf** provisions a VPC, subnets and availability zones using the AWS VPC Module. A new VPC is created for this test 
